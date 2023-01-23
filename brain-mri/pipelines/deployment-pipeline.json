@@ -18,7 +18,7 @@
     "stdin": [
       "python deploy.py --deployment-name brain-mri-deploy --gcs-model-bucket kserve-models"
     ],
-    "image": "hugcyrill/pdk:deploy_brain_0.0.3",
+    "image": "hugcyrill/pdk:deploy_brain_0.0.4",
     "secrets": [
       {
         "name": "pipeline-secret",

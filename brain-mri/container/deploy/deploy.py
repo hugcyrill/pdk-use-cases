@@ -181,7 +181,9 @@ def create_inference_service(kclient, k8s_namespace, model_name, deployment_name
         ),
         spec=V1beta1InferenceServiceSpec(
             predictor=V1beta1PredictorSpec(
-                pytorch=(V1beta1TorchServeSpec(storage_uri="gs://kserve-models/%s" % (model_name)))
+                pytorch=(
+                    V1beta1TorchServeSpec(protocol_version="v2", storage_uri="gs://kserve-models/%s" % (model_name))
+                )
             )
         ),
     )
